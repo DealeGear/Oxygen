@@ -84,7 +84,7 @@ a:hover {
     display: flex;
     align-items: center;
     min-height: 90vh;
-    background: linear-gradient(135deg, rgba(0, 95, 115, 0.9), rgba(10, 147, 150, 0.8)), url('https://via.placeholder.com/1920x1080/005f73/ffffff?text=Energia+Sustentável') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(0, 95, 115, 0.9), rgba(10, 147, 150, 0.8)), url('https://picsum.photos/seed/oxygen3/1920/1080.jpg') no-repeat center center/cover;
     color: var(--white);
     padding: 0 5%;
 }

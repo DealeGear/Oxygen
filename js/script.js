@@ -88,15 +88,23 @@ const animateNumbers = () => {
 
 // Disparar animação quando a seção de impacto estiver visível
 const impactSection = document.querySelector('.impact');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateNumbers();
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
 if (impactSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateNumbers();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
     observer.observe(impactSection);
 }
+
+// Tratamento de erros para imagens
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+        console.log('Erro ao carregar imagem:', this.src);
+        // Imagem de fallback já está definida no atributo onerror
+    });
+});
